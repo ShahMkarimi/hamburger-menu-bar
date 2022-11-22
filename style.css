@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+div.menu-btn{
+    position: relative;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border: 3px solid #fff;
+}
+
+div.menu-btn-burger {
+    width: 60px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47,.2);
+    transition: all.5s ease-in-out;
+}
+
+div.menu-btn-burger::before {
+        content: " ";
+        position: absolute;
+        width: 60px;
+        height: 6px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47,.2);
+        transition: all.5s ease-in-out;
+    
+}
+
+div.menu-btn-burger::after {
+        content: " ";
+        position: absolute;
+        width: 60px;
+        height: 6px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47,.2);
+        transition: all.5s ease-in-out;
+}
+
+div.menu-btn-burger::before {
+        transform: translateY(-18px);
+}
+div.menu-btn-burger::after {
+        transform: translateY(18px);
+
+}
+/* animation */
+div.menu-btn.open div.menu-btn-burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+
+}
+
+div.menu-btn.open div.menu-btn-burger::before {
+    transform: rotate( 45deg) translate(35px, -35px);
+
+}
+
+div.menu-btn.open div.menu-btn-burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
