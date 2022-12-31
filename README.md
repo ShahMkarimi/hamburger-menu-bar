@@ -13,6 +13,7 @@ index.html
     <title>humberger</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
+
 <body>
 <!--    just with header and div  -->
     <header class="head">
